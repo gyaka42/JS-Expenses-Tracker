@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(79, 79, 79);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-family: 'Inconsolata';
+}
+
+.heading {
+  color: rgb(0, 234, 234);
+  text-shadow: 2px 2px 20px rgb(0, 234, 234);
+  letter-spacing: 2px;
+}
+.container {
+  min-width: 60vw;
+  max-width: 80vw;
+  height: 70vh;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+.greet {
+  align-self: start;
+  font-size: 25px;
+}
+.greet input {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 400;
+}
+form {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.double {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.form-fiyat,
+.form-harcama {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.ekle-btn {
+  background-color: red;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.toplam {
+  background-color: rgb(0, 35, 35);
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: white;
+  font-size: 21px;
+}
+.toplam span {
+  color: aqua;
+}
+#liste {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding: 40px;
+  overflow: auto;
+}
+
+.harcama {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.fall {
+  transform: translateY(100px) rotateZ(20deg);
+  opacity: 0;
+}
+
+.harcama-fiyat {
+  color: red;
+}
+
+.harcama img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Done when paid */
+.odendi {
+  opacity: 0.7;
+}
+.odendi .harcama-title {
+  text-decoration: line-through;
+}
+
+.odendi .harcama-fiyat {
+  color: green;
+}
+
+/* CSS for Select */
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
